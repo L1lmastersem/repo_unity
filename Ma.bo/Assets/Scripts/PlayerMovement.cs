@@ -20,21 +20,21 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            _rigidbody.AddForce(Vector3.forward * (Time.deltaTime * _movementSpeed));
+            _rigidbody.AddForce(transform.forward * (Time.deltaTime * _movementSpeed));
         }
         if (Input.GetKey(KeyCode.S))
         {
-            _rigidbody.AddForce(Vector3.back * (Time.deltaTime * _movementSpeed));
+            _rigidbody.AddForce(transform.forward * -(Time.deltaTime * _movementSpeed));
         }
         if (Input.GetKey(KeyCode.A))
         {
-            _rigidbody.AddForce(Vector3.left * (Time.deltaTime * _movementSpeed));
+            _rigidbody.AddForce(-transform.right * (Time.deltaTime * _movementSpeed));
         }
         if (Input.GetKey(KeyCode.D))
         {
-            _rigidbody.AddForce(Vector3.right * (Time.deltaTime * _movementSpeed));
+            _rigidbody.AddForce(transform.right * (Time.deltaTime * _movementSpeed));
         }
-        float mx =        Input.GetAxis("Mouse X");
+        //float mx = Input.GetAxis("Mouse X");
     }
 }
  
